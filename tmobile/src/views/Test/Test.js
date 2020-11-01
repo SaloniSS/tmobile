@@ -19,7 +19,7 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
 import Description from "./Sections/description.js";
-import ACM from "./Sections/acm-3.js";
+import Tester from "./Sections/tester.js";
 
 const dashboardRoutes = [];
 
@@ -63,7 +63,7 @@ export default function Test(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <Description />
-          <ACM />
+          <Tester />
         </div>
       </div>
       <Footer />
