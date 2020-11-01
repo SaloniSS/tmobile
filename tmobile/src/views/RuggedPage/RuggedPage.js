@@ -21,7 +21,7 @@ const RuggedPage = (props) => {
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="Vulnerabilities"
+        brand="Rugged"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
