@@ -3,61 +3,55 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import CustomTabs from "components/CustomTabs/CustomTabs.js";
 
+import cve from "./cve.json";
+
 const VulnerabilitiesPage = () => {
   return (
     <GridContainer>
-      <GridItem xs={12} sm={12} md={6}>
-        <h3>
-          <small>Tabs with Icons on Card</small>
-        </h3>
-        <CustomTabs
-          headerColor="primary"
-          tabs={[
-            {
-              tabName: "Profile",
-              tabContent: (
-                <p>
-                  I think that’s a responsibility that I have, to push
-                  possibilities, to show people, this is the level that things
-                  could be at. So when you get something that has the name Kanye
-                  West on it, it’s supposed to be pushing the furthest
-                  possibilities. I will be the leader of a company that ends up
-                  being worth billions of dollars, because I got the answers. I
-                  understand culture. I am the nucleus.
-                </p>
-              ),
-            },
-            {
-              tabName: "Messages",
-              tabContent: (
-                <p>
-                  I think that’s a responsibility that I have, to push
-                  possibilities, to show people, this is the level that things
-                  could be at. I will be the leader of a company that ends up
-                  being worth billions of dollars, because I got the answers. I
-                  understand culture. I am the nucleus. I think that’s a
-                  responsibility that I have, to push possibilities, to show
-                  people, this is the level that things could be at.
-                </p>
-              ),
-            },
-            {
-              tabName: "Settings",
-              tabContent: (
-                <p>
-                  think that’s a responsibility that I have, to push
-                  possibilities, to show people, this is the level that things
-                  could be at. So when you get something that has the name Kanye
-                  West on it, it’s supposed to be pushing the furthest
-                  possibilities. I will be the leader of a company that ends up
-                  being worth billions of dollars, because I got the answers. I
-                  understand culture. I am the nucleus.
-                </p>
-              ),
-            },
-          ]}
-        />
-      </GridItem>
+      {cve.CVE_Items.map((vun) => (
+        <GridItem xs={12} sm={12} md={6}>
+          <CustomTabs
+            headerColor="primary"
+            tabs={[
+              {
+                tabName: "Basic Details",
+                tabContent: (
+                  <p>
+                    {vun.cve.CVE_data_meta.ID}
+                    {vun.cve.description.description_data[0].value}
+                  </p>
+                ),
+              },
+              {
+                tabName: "Resources",
+                tabContent: (
+                  <p>
+                    {
+                      <ul>
+                        {vun.cve.references.reference_data.map((res) => (
+                          <a href={res.link}>{res.name}</a>
+                        ))}
+                      </ul>
+                    }
+                  </p>
+                ),
+              },
+              {
+                tabName: "Misc.",
+                tabContent: (
+                  <p>
+                    Exploitability Score :
+                    {vun.impact.baseMetricV3
+                      ? vun.impact.baseMetricV3.exploitabilityScore
+                      : "hi"}
+                    Published: {vun.publishedDate}
+                  </p>
+                ),
+              },
+            ]}
+          />
+        </GridItem>
+      ))}
     </GridContainer>
   );
 };
