@@ -15,6 +15,8 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
+const axios = require("axios").default;
+
 const useStyles = makeStyles(styles);
 
 export default function ACM() {
@@ -24,8 +26,21 @@ export default function ACM() {
 
   const classes = useStyles();
 
-  function getResults() {
+  async function getResults() {
     console.log("Testing website", website);
+    const tempWebsite = "http://acmutd.co/";
+    console.log(tempWebsite.substring(tempWebsite.indexOf("//") + 2));
+    const changedWebsite = tempWebsite.substring(
+      tempWebsite.indexOf("//") + 2,
+      tempWebsite.length - 1
+    );
+    console.log(changedWebsite);
+    //const result = await axios(`http://localhost:5000/${changedWebsite}`);
+    const result = await axios(
+      `https://tmobile20.ue.r.appspot.com/${changedWebsite}`
+    );
+    console.log(result);
+    setFlags(result.data);
     setResult(true);
   }
 
