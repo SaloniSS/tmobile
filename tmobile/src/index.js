@@ -27,7 +27,7 @@ ReactDOM.render(
       <Route path="/test" component={Test} />
       <Route path="/vulnerabilities" component={VulnerabilitiesPage} />
       <Route path="/rugged" component={RuggedPage} />
-      <Route path="/" component={Components} />
+      <Route path="/" component={RuggedPage} />
     </Switch>
   </Router>,
   document.getElementById("root")

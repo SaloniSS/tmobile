@@ -9,6 +9,7 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import CustomTabs from "components/CustomTabs/CustomTabs.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
+import Button from "components/CustomButtons/Button.js";
 
 const useStyles = makeStyles(styles);
 const dashboardRoutes = [];
@@ -105,17 +106,23 @@ const RuggedPage = (props) => {
                   {
                     tabName: "CTF",
                     tabContent: (
-                      <p>
-                        Get some mock experience in solving challenges to help
-                        you become a better cyber-security professional here! We
-                        take you through 2 CTFs to learn necessary skills to
-                        learn how to make your code more safe.
-                      </p>
+                      <div>
+                        <p>
+                          Get some mock experience in solving challenges to help
+                          you become a better cyber-security professional here!
+                          We take you through 2 CTFs to learn necessary skills
+                          to learn how to make your code more safe.
+                        </p>
+                        <Button href="/ctf" color="primary">
+                          CTF
+                        </Button>
+                      </div>
                     ),
                   },
                   {
                     tabName: "Pen Testing",
                     tabContent: (
+                      <div>
                       <p>
                         Most approaches to security are about finding
                         Vulnerabilitiesand then fixing them. However, Rugged
@@ -124,17 +131,26 @@ const RuggedPage = (props) => {
                         not learning from their mistakes, running into the same
                         issues again and again, while Rugged learns and evolves.
                       </p>
+                      <Button href="/test" color="primary">
+                      Pen Test
+                    </Button>
+                    </div>
                     ),
                   },
                   {
                     tabName: "Vulnerabilities",
                     tabContent: (
+                      <div>
                       <p>
                         Here is a list of all the Common Vulnerabilities and
                         Exposures. It pulls from the CVE database RSS feed to
                         get the latest ones. You can search for keywords and
                         based on severity.
                       </p>
+                      <Button href="/vulnerabilities" color="primary">
+                      Vulnerability
+                    </Button>
+                      </div>
                     ),
                   },
                 ]}

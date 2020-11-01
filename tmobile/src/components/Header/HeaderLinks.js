@@ -22,7 +22,8 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <Button
           href="#pablo"
-          className={classes.navLink + " " + classes.navLinkActive}
+          className={classes.navLink}
+          // classes.navLink + " " + classes.navLinkActive
           onClick={(e) => e.preventDefault()}
           color="transparent"
         >

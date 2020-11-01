@@ -14,6 +14,7 @@ import Button from "components/CustomButtons/Button.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 import cve from "./cve.json";
+import { BrowserRouter } from "react-router-dom";
 
 const dashboardRoutes = [];
 
@@ -99,13 +100,13 @@ const VulnerabilitiesPage = (props) => {
                           {
                             <ul>
                               {vun.cve.references.reference_data.map((res) => (
+                                <a href={res.url} target="_blank">
                                 <div>
-                                  <a href={res.link} target="_blank">
-                                    {res.name}
-                                  </a>
+                                    <p>{res.name}</p>
                                   <br />
                                   <br />
                                 </div>
+                                </a>
                               ))}
                             </ul>
                           }
