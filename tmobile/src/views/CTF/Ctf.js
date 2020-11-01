@@ -21,8 +21,9 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
-import Iframe from "./Sections/Iframe.js"
-import ACM from "./Sections/acm-3.js"
+import Iframe from "./Sections/Iframe.js";
+import ACM from "./Sections/acm-3.js";
+import CTF2 from "./Sections/ctf2.js";
 
 const dashboardRoutes = [];
 
@@ -62,9 +63,10 @@ export default function CTF(props) {
         <div className={classes.container}>
           <Iframe />
           <ACM />
-          <ProductSection/>
+          <CTF2 />
+          {/* <ProductSection/>
           <TeamSection />
-          <WorkSection />
+          <WorkSection /> */}
         </div>
       </div>
       <Footer />
