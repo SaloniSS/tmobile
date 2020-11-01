@@ -19,7 +19,7 @@ const axios = require("axios").default;
 
 const useStyles = makeStyles(styles);
 
-export default function ACM() {
+export default function Tester() {
   const [result, setResult] = useState(false);
   const [website, setWebsite] = useState("");
   const [flags, setFlags] = useState(0);
