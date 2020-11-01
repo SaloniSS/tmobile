@@ -69,7 +69,7 @@ def pen_test(content):
 
     flag = 0
     for keyword in keywords:
-        if (content.find(keyword) == -1):
+        if (str(content).find(keyword) != -1):
             flag = flag+1
 
     for pattern in patterns:
