@@ -1,0 +1,2193 @@
+{
+  "CVE_Items": [{
+    "cve" : {
+      "data_type" : "CVE",
+      "data_format" : "MITRE",
+      "data_version" : "4.0",
+      "CVE_data_meta" : {
+        "ID" : "CVE-2012-5639",
+        "ASSIGNER" : "cve@mitre.org"
+      },
+      "problemtype" : {
+        "problemtype_data" : [ {
+          "description" : [ {
+            "lang" : "en",
+            "value" : "CWE-20"
+          } ]
+        } ]
+      },
+      "references" : {
+        "reference_data" : [ {
+          "url" : "http://www.openwall.com/lists/oss-security/2012/12/14/1",
+          "name" : "http://www.openwall.com/lists/oss-security/2012/12/14/1",
+          "refsource" : "MISC",
+          "tags" : [ "Mailing List", "Third Party Advisory" ]
+        }, {
+          "url" : "https://access.redhat.com/security/cve/cve-2012-5639",
+          "name" : "Red Hat",
+          "refsource" : "REDHAT",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2012-5639",
+          "name" : "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2012-5639",
+          "refsource" : "MISC",
+          "tags" : [ "Issue Tracking", "Third Party Advisory" ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/r253f92d0e6511d07a79774002e1d9db1d20b24bff27914a5adb14ccb@%3Cissues.openoffice.apache.org%3E",
+          "name" : "[openoffice-issues] 20201025 [Issue 121493] CVE-2012-5639: Remote file inclusion by office application",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://security-tracker.debian.org/tracker/CVE-2012-5639",
+          "name" : "https://security-tracker.debian.org/tracker/CVE-2012-5639",
+          "refsource" : "MISC",
+          "tags" : [ "Third Party Advisory" ]
+        } ]
+      },
+      "description" : {
+        "description_data" : [ {
+          "lang" : "en",
+          "value" : "LibreOffice and OpenOffice automatically open embedded content"
+        } ]
+      }
+    },
+    "configurations" : {
+      "CVE_data_version" : "4.0",
+      "nodes" : [ {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:libreoffice:libreoffice:-:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:apache:openoffice:-:*:*:*:*:*:*:*"
+        } ]
+      } ]
+    },
+    "impact" : {
+      "baseMetricV3" : {
+        "cvssV3" : {
+          "version" : "3.1",
+          "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "attackVector" : "NETWORK",
+          "attackComplexity" : "LOW",
+          "privilegesRequired" : "NONE",
+          "userInteraction" : "REQUIRED",
+          "scope" : "UNCHANGED",
+          "confidentialityImpact" : "HIGH",
+          "integrityImpact" : "NONE",
+          "availabilityImpact" : "NONE",
+          "baseScore" : 6.5,
+          "baseSeverity" : "MEDIUM"
+        },
+        "exploitabilityScore" : 2.8,
+        "impactScore" : 3.6
+      },
+      "baseMetricV2" : {
+        "cvssV2" : {
+          "version" : "2.0",
+          "vectorString" : "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+          "accessVector" : "NETWORK",
+          "accessComplexity" : "MEDIUM",
+          "authentication" : "NONE",
+          "confidentialityImpact" : "PARTIAL",
+          "integrityImpact" : "NONE",
+          "availabilityImpact" : "NONE",
+          "baseScore" : 4.3
+        },
+        "severity" : "MEDIUM",
+        "exploitabilityScore" : 8.6,
+        "impactScore" : 2.9,
+        "acInsufInfo" : false,
+        "obtainAllPrivilege" : false,
+        "obtainUserPrivilege" : false,
+        "obtainOtherPrivilege" : false,
+        "userInteractionRequired" : true
+      }
+    },
+    "publishedDate" : "2019-12-20T14:15Z",
+    "lastModifiedDate" : "2020-10-26T12:17Z"
+  }, {
+    "cve" : {
+      "data_type" : "CVE",
+      "data_format" : "MITRE",
+      "data_version" : "4.0",
+      "CVE_data_meta" : {
+        "ID" : "CVE-2013-4786",
+        "ASSIGNER" : "cve@mitre.org"
+      },
+      "problemtype" : {
+        "problemtype_data" : [ {
+          "description" : [ {
+            "lang" : "en",
+            "value" : "CWE-255"
+          } ]
+        } ]
+      },
+      "references" : {
+        "reference_data" : [ {
+          "url" : "http://fish2.com/ipmi/remote-pw-cracking.html",
+          "name" : "http://fish2.com/ipmi/remote-pw-cracking.html",
+          "refsource" : "MISC",
+          "tags" : [ ]
+        }, {
+          "url" : "http://marc.info/?l=bugtraq&m=139653661621384&w=2",
+          "name" : "HPSBHF02981",
+          "refsource" : "HP",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.oracle.com/technetwork/security-advisory/cpuapr2016v3-2985753.html",
+          "name" : "http://www.oracle.com/technetwork/security-advisory/cpuapr2016v3-2985753.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "https://community.rapid7.com/community/metasploit/blog/2013/07/02/a-penetration-testers-guide-to-ipmi",
+          "name" : "https://community.rapid7.com/community/metasploit/blog/2013/07/02/a-penetration-testers-guide-to-ipmi",
+          "refsource" : "MISC",
+          "tags" : [ ]
+        }, {
+          "url" : "https://nvidia.custhelp.com/app/answers/detail/a_id/5010",
+          "name" : "https://nvidia.custhelp.com/app/answers/detail/a_id/5010",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "https://security.netapp.com/advisory/ntap-20190919-0005/",
+          "name" : "https://security.netapp.com/advisory/ntap-20190919-0005/",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "https://support.hpe.com/hpsc/doc/public/display?docLocale=en_US&docId=emr_na-c04197764",
+          "name" : "https://support.hpe.com/hpsc/doc/public/display?docLocale=en_US&docId=emr_na-c04197764",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        } ]
+      },
+      "description" : {
+        "description_data" : [ {
+          "lang" : "en",
+          "value" : "The IPMI 2.0 specification supports RMCP+ Authenticated Key-Exchange Protocol (RAKP) authentication, which allows remote attackers to obtain password hashes and conduct offline password guessing attacks by obtaining the HMAC from a RAKP message 2 response from a BMC."
+        } ]
+      }
+    },
+    "configurations" : {
+      "CVE_data_version" : "4.0",
+      "nodes" : [ {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:oracle:fujitsu_m10_firmware:*:*:*:*:*:*:*:*",
+          "versionEndIncluding" : "2290"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:intel:intelligent_platform_management_interface:2.0:*:*:*:*:*:*:*"
+        } ]
+      } ]
+    },
+    "impact" : {
+      "baseMetricV3" : {
+        "cvssV3" : {
+          "version" : "3.0",
+          "vectorString" : "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "attackVector" : "NETWORK",
+          "attackComplexity" : "LOW",
+          "privilegesRequired" : "NONE",
+          "userInteraction" : "NONE",
+          "scope" : "UNCHANGED",
+          "confidentialityImpact" : "HIGH",
+          "integrityImpact" : "NONE",
+          "availabilityImpact" : "NONE",
+          "baseScore" : 7.5,
+          "baseSeverity" : "HIGH"
+        },
+        "exploitabilityScore" : 3.9,
+        "impactScore" : 3.6
+      },
+      "baseMetricV2" : {
+        "cvssV2" : {
+          "version" : "2.0",
+          "vectorString" : "AV:N/AC:L/Au:N/C:C/I:N/A:N",
+          "accessVector" : "NETWORK",
+          "accessComplexity" : "LOW",
+          "authentication" : "NONE",
+          "confidentialityImpact" : "COMPLETE",
+          "integrityImpact" : "NONE",
+          "availabilityImpact" : "NONE",
+          "baseScore" : 7.8
+        },
+        "severity" : "HIGH",
+        "exploitabilityScore" : 10.0,
+        "impactScore" : 6.9,
+        "obtainAllPrivilege" : false,
+        "obtainUserPrivilege" : false,
+        "obtainOtherPrivilege" : false,
+        "userInteractionRequired" : false
+      }
+    },
+    "publishedDate" : "2013-07-08T22:55Z",
+    "lastModifiedDate" : "2020-10-29T00:15Z"
+  }, {
+    "cve" : {
+      "data_type" : "CVE",
+      "data_format" : "MITRE",
+      "data_version" : "4.0",
+      "CVE_data_meta" : {
+        "ID" : "CVE-2013-6335",
+        "ASSIGNER" : "cve@mitre.org"
+      },
+      "problemtype" : {
+        "problemtype_data" : [ {
+          "description" : [ {
+            "lang" : "en",
+            "value" : "CWE-281"
+          } ]
+        } ]
+      },
+      "references" : {
+        "reference_data" : [ {
+          "url" : "http://secunia.com/advisories/60482",
+          "name" : "60482",
+          "refsource" : "SECUNIA",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www-01.ibm.com/support/docview.wss?uid=swg1IC96095",
+          "name" : "IC96095",
+          "refsource" : "AIXAPAR",
+          "tags" : [ "Broken Link" ]
+        }, {
+          "url" : "http://www-01.ibm.com/support/docview.wss?uid=swg21680453",
+          "name" : "http://www-01.ibm.com/support/docview.wss?uid=swg21680453",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Vendor Advisory" ]
+        }, {
+          "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/89054",
+          "name" : "ibm-tsm-cve20136335-info-disc(89054)",
+          "refsource" : "XF",
+          "tags" : [ "VDB Entry", "Vendor Advisory" ]
+        } ]
+      },
+      "description" : {
+        "description_data" : [ {
+          "lang" : "en",
+          "value" : "The Backup-Archive client in IBM Tivoli Storage Manager (TSM) for Space Management 5.x and 6.x before 6.2.5.3, 6.3.x before 6.3.2, 6.4.x before 6.4.2, and 7.1.x before 7.1.0.3 on Linux and AIX, and 5.x and 6.x before 6.1.5.6 on Solaris and HP-UX, does not preserve file permissions across backup and restore operations, which allows local users to bypass intended access restrictions via standard filesystem operations."
+        } ]
+      }
+    },
+    "configurations" : {
+      "CVE_data_version" : "4.0",
+      "nodes" : [ {
+        "operator" : "AND",
+        "children" : [ {
+          "operator" : "OR",
+          "cpe_match" : [ {
+            "vulnerable" : true,
+            "cpe23Uri" : "cpe:2.3:a:ibm:tivoli_storage_manager:*:*:*:*:*:*:*:*",
+            "versionStartIncluding" : "5.1",
+            "versionEndExcluding" : "6.2.5.3"
+          }, {
+            "vulnerable" : true,
+            "cpe23Uri" : "cpe:2.3:a:ibm:tivoli_storage_manager:*:*:*:*:*:*:*:*",
+            "versionStartIncluding" : "6.3.0",
+            "versionEndExcluding" : "6.3.2"
+          }, {
+            "vulnerable" : true,
+            "cpe23Uri" : "cpe:2.3:a:ibm:tivoli_storage_manager:*:*:*:*:*:*:*:*",
+            "versionStartIncluding" : "6.4.0",
+            "versionEndExcluding" : "6.4.2"
+          }, {
+            "vulnerable" : true,
+            "cpe23Uri" : "cpe:2.3:a:ibm:tivoli_storage_manager:*:*:*:*:*:*:*:*",
+            "versionStartIncluding" : "7.1.0.0",
+            "versionEndExcluding" : "7.1.0.3"
+          } ]
+        }, {
+          "operator" : "OR",
+          "cpe_match" : [ {
+            "vulnerable" : false,
+            "cpe23Uri" : "cpe:2.3:o:ibm:aix:-:*:*:*:*:*:*:*"
+          }, {
+            "vulnerable" : false,
+            "cpe23Uri" : "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*"
+          } ]
+        } ]
+      }, {
+        "operator" : "AND",
+        "children" : [ {
+          "operator" : "OR",
+          "cpe_match" : [ {
+            "vulnerable" : true,
+            "cpe23Uri" : "cpe:2.3:a:ibm:tivoli_storage_manager:*:*:*:*:*:*:*:*",
+            "versionStartIncluding" : "5.1",
+            "versionEndExcluding" : "6.1.5.6"
+          } ]
+        }, {
+          "operator" : "OR",
+          "cpe_match" : [ {
+            "vulnerable" : false,
+            "cpe23Uri" : "cpe:2.3:o:hp:hp-ux:-:*:*:*:*:*:*:*"
+          }, {
+            "vulnerable" : false,
+            "cpe23Uri" : "cpe:2.3:o:oracle:solaris:-:*:*:*:*:*:-:*"
+          } ]
+        } ]
+      } ]
+    },
+    "impact" : {
+      "baseMetricV2" : {
+        "cvssV2" : {
+          "version" : "2.0",
+          "vectorString" : "AV:L/AC:M/Au:N/C:P/I:P/A:N",
+          "accessVector" : "LOCAL",
+          "accessComplexity" : "MEDIUM",
+          "authentication" : "NONE",
+          "confidentialityImpact" : "PARTIAL",
+          "integrityImpact" : "PARTIAL",
+          "availabilityImpact" : "NONE",
+          "baseScore" : 3.3
+        },
+        "severity" : "LOW",
+        "exploitabilityScore" : 3.4,
+        "impactScore" : 4.9,
+        "acInsufInfo" : false,
+        "obtainAllPrivilege" : false,
+        "obtainUserPrivilege" : false,
+        "obtainOtherPrivilege" : false,
+        "userInteractionRequired" : false
+      }
+    },
+    "publishedDate" : "2014-08-26T10:55Z",
+    "lastModifiedDate" : "2020-10-29T20:19Z"
+  }, {
+    "cve" : {
+      "data_type" : "CVE",
+      "data_format" : "MITRE",
+      "data_version" : "4.0",
+      "CVE_data_meta" : {
+        "ID" : "CVE-2014-1483",
+        "ASSIGNER" : "cve@mitre.org"
+      },
+      "problemtype" : {
+        "problemtype_data" : [ {
+          "description" : [ {
+            "lang" : "en",
+            "value" : "CWE-1021"
+          } ]
+        } ]
+      },
+      "references" : {
+        "reference_data" : [ {
+          "url" : "http://lists.opensuse.org/opensuse-security-announce/2014-02/msg00004.html",
+          "name" : "openSUSE-SU-2014:0212",
+          "refsource" : "SUSE",
+          "tags" : [ "Mailing List", "Third Party Advisory" ]
+        }, {
+          "url" : "http://lists.opensuse.org/opensuse-security-announce/2014-02/msg00010.html",
+          "name" : "SUSE-SU-2014:0248",
+          "refsource" : "SUSE",
+          "tags" : [ "Mailing List", "Third Party Advisory" ]
+        }, {
+          "url" : "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00017.html",
+          "name" : "openSUSE-SU-2014:0419",
+          "refsource" : "SUSE",
+          "tags" : [ "Mailing List", "Third Party Advisory" ]
+        }, {
+          "url" : "http://osvdb.org/102869",
+          "name" : "102869",
+          "refsource" : "OSVDB",
+          "tags" : [ "Broken Link" ]
+        }, {
+          "url" : "http://secunia.com/advisories/56706",
+          "name" : "56706",
+          "refsource" : "SECUNIA",
+          "tags" : [ "Broken Link" ]
+        }, {
+          "url" : "http://secunia.com/advisories/56767",
+          "name" : "56767",
+          "refsource" : "SECUNIA",
+          "tags" : [ "Broken Link" ]
+        }, {
+          "url" : "http://secunia.com/advisories/56787",
+          "name" : "56787",
+          "refsource" : "SECUNIA",
+          "tags" : [ "Broken Link" ]
+        }, {
+          "url" : "http://secunia.com/advisories/56888",
+          "name" : "56888",
+          "refsource" : "SECUNIA",
+          "tags" : [ "Broken Link" ]
+        }, {
+          "url" : "http://www.mozilla.org/security/announce/2014/mfsa2014-05.html",
+          "name" : "http://www.mozilla.org/security/announce/2014/mfsa2014-05.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Vendor Advisory" ]
+        }, {
+          "url" : "http://www.oracle.com/technetwork/topics/security/bulletinapr2016-2952098.html",
+          "name" : "http://www.oracle.com/technetwork/topics/security/bulletinapr2016-2952098.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.securityfocus.com/bid/65316",
+          "name" : "65316",
+          "refsource" : "BID",
+          "tags" : [ "Third Party Advisory", "VDB Entry" ]
+        }, {
+          "url" : "http://www.securitytracker.com/id/1029717",
+          "name" : "1029717",
+          "refsource" : "SECTRACK",
+          "tags" : [ "Third Party Advisory", "VDB Entry" ]
+        }, {
+          "url" : "http://www.securitytracker.com/id/1029720",
+          "name" : "1029720",
+          "refsource" : "SECTRACK",
+          "tags" : [ "Third Party Advisory", "VDB Entry" ]
+        }, {
+          "url" : "http://www.ubuntu.com/usn/USN-2102-1",
+          "name" : "USN-2102-1",
+          "refsource" : "UBUNTU",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.ubuntu.com/usn/USN-2102-2",
+          "name" : "USN-2102-2",
+          "refsource" : "UBUNTU",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "https://8pecxstudios.com/?page_id=44080",
+          "name" : "https://8pecxstudios.com/?page_id=44080",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Broken Link" ]
+        }, {
+          "url" : "https://bugzilla.mozilla.org/show_bug.cgi?id=950427",
+          "name" : "https://bugzilla.mozilla.org/show_bug.cgi?id=950427",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Issue Tracking", "Vendor Advisory" ]
+        }, {
+          "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/90893",
+          "name" : "firefox-cve20141483-info-disc(90893)",
+          "refsource" : "XF",
+          "tags" : [ "Third Party Advisory", "VDB Entry" ]
+        }, {
+          "url" : "https://security.gentoo.org/glsa/201504-01",
+          "name" : "GLSA-201504-01",
+          "refsource" : "GENTOO",
+          "tags" : [ "Third Party Advisory" ]
+        } ]
+      },
+      "description" : {
+        "description_data" : [ {
+          "lang" : "en",
+          "value" : "Mozilla Firefox before 27.0 and SeaMonkey before 2.24 allow remote attackers to bypass the Same Origin Policy and obtain sensitive information by using an IFRAME element in conjunction with certain timing measurements involving the document.caretPositionFromPoint and document.elementFromPoint functions."
+        } ]
+      }
+    },
+    "configurations" : {
+      "CVE_data_version" : "4.0",
+      "nodes" : [ {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:oracle:solaris:11.3:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:canonical:ubuntu_linux:12.04:*:*:*:esm:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:canonical:ubuntu_linux:12.10:*:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:canonical:ubuntu_linux:13.10:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:mozilla:firefox:*:*:*:*:*:*:*:*",
+          "versionEndExcluding" : "27.0"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:mozilla:seamonkey:*:*:*:*:*:*:*:*",
+          "versionEndExcluding" : "2.24"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:suse:suse_linux_enterprise_software_development_kit:11.0:sp3:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:opensuse:opensuse:11.4:*:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:opensuse:opensuse:12.3:*:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:opensuse:opensuse:13.1:*:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:suse:linux_enterprise_desktop:11:sp3:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:suse:linux_enterprise_server:11:sp3:*:*:*:-:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:suse:linux_enterprise_server:11:sp3:*:*:*:vmware:*:*"
+        } ]
+      } ]
+    },
+    "impact" : {
+      "baseMetricV2" : {
+        "cvssV2" : {
+          "version" : "2.0",
+          "vectorString" : "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+          "accessVector" : "NETWORK",
+          "accessComplexity" : "LOW",
+          "authentication" : "NONE",
+          "confidentialityImpact" : "PARTIAL",
+          "integrityImpact" : "NONE",
+          "availabilityImpact" : "NONE",
+          "baseScore" : 5.0
+        },
+        "severity" : "MEDIUM",
+        "exploitabilityScore" : 10.0,
+        "impactScore" : 2.9,
+        "acInsufInfo" : false,
+        "obtainAllPrivilege" : false,
+        "obtainUserPrivilege" : false,
+        "obtainOtherPrivilege" : false,
+        "userInteractionRequired" : false
+      }
+    },
+    "publishedDate" : "2014-02-06T05:44Z",
+    "lastModifiedDate" : "2020-10-23T18:03Z"
+  }, {
+    "cve" : {
+      "data_type" : "CVE",
+      "data_format" : "MITRE",
+      "data_version" : "4.0",
+      "CVE_data_meta" : {
+        "ID" : "CVE-2014-5194",
+        "ASSIGNER" : "cve@mitre.org"
+      },
+      "problemtype" : {
+        "problemtype_data" : [ {
+          "description" : [ {
+            "lang" : "en",
+            "value" : "CWE-94"
+          } ]
+        } ]
+      },
+      "references" : {
+        "reference_data" : [ {
+          "url" : "http://packetstormsecurity.com/files/159715/Sphider-Search-Engine-1.3.6-Remote-Code-Execution.html",
+          "name" : "http://packetstormsecurity.com/files/159715/Sphider-Search-Engine-1.3.6-Remote-Code-Execution.html",
+          "refsource" : "MISC",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.exploit-db.com/exploits/34189",
+          "name" : "34189",
+          "refsource" : "EXPLOIT-DB",
+          "tags" : [ "Exploit" ]
+        } ]
+      },
+      "description" : {
+        "description_data" : [ {
+          "lang" : "en",
+          "value" : "Static code injection vulnerability in admin/admin.php in Sphider 1.3.6 allows remote authenticated users to inject arbitrary PHP code into settings/conf.php via the _word_upper_bound parameter."
+        } ]
+      }
+    },
+    "configurations" : {
+      "CVE_data_version" : "4.0",
+      "nodes" : [ {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:sphider:sphider:1.3.6:*:*:*:*:*:*:*"
+        } ]
+      } ]
+    },
+    "impact" : {
+      "baseMetricV2" : {
+        "cvssV2" : {
+          "version" : "2.0",
+          "vectorString" : "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+          "accessVector" : "NETWORK",
+          "accessComplexity" : "LOW",
+          "authentication" : "SINGLE",
+          "confidentialityImpact" : "PARTIAL",
+          "integrityImpact" : "PARTIAL",
+          "availabilityImpact" : "PARTIAL",
+          "baseScore" : 6.5
+        },
+        "severity" : "MEDIUM",
+        "exploitabilityScore" : 8.0,
+        "impactScore" : 6.4,
+        "obtainAllPrivilege" : false,
+        "obtainUserPrivilege" : false,
+        "obtainOtherPrivilege" : false,
+        "userInteractionRequired" : false
+      }
+    },
+    "publishedDate" : "2014-08-07T11:13Z",
+    "lastModifiedDate" : "2020-10-27T16:15Z"
+  }, {
+    "cve" : {
+      "data_type" : "CVE",
+      "data_format" : "MITRE",
+      "data_version" : "4.0",
+      "CVE_data_meta" : {
+        "ID" : "CVE-2014-6051",
+        "ASSIGNER" : "cve@mitre.org"
+      },
+      "problemtype" : {
+        "problemtype_data" : [ {
+          "description" : [ {
+            "lang" : "en",
+            "value" : "CWE-189"
+          } ]
+        } ]
+      },
+      "references" : {
+        "reference_data" : [ {
+          "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2014-October/139654.html",
+          "name" : "FEDORA-2014-11685",
+          "refsource" : "FEDORA",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2014-September/139445.html",
+          "name" : "FEDORA-2014-11537",
+          "refsource" : "FEDORA",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://lists.opensuse.org/opensuse-updates/2015-12/msg00022.html",
+          "name" : "openSUSE-SU-2015:2207",
+          "refsource" : "SUSE",
+          "tags" : [ ]
+        }, {
+          "url" : "http://rhn.redhat.com/errata/RHSA-2015-0113.html",
+          "name" : "RHSA-2015:0113",
+          "refsource" : "REDHAT",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://seclists.org/oss-sec/2014/q3/639",
+          "name" : "[oss-security] 20140923 Multiple issues in libVNCserver",
+          "refsource" : "MLIST",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://secunia.com/advisories/61506",
+          "name" : "61506",
+          "refsource" : "SECUNIA",
+          "tags" : [ "Permissions Required", "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.debian.org/security/2014/dsa-3081",
+          "name" : "DSA-3081",
+          "refsource" : "DEBIAN",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.ocert.org/advisories/ocert-2014-007.html",
+          "name" : "http://www.ocert.org/advisories/ocert-2014-007.html",
+          "refsource" : "MISC",
+          "tags" : [ "Patch", "Third Party Advisory", "US Government Resource" ]
+        }, {
+          "url" : "http://www.openwall.com/lists/oss-security/2014/09/25/11",
+          "name" : "[oss-security] 20140925 [oCERT-2014-007] libvncserver multiple issues",
+          "refsource" : "MLIST",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.oracle.com/technetwork/topics/security/bulletinoct2015-2511968.html",
+          "name" : "http://www.oracle.com/technetwork/topics/security/bulletinoct2015-2511968.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.securityfocus.com/bid/70093",
+          "name" : "70093",
+          "refsource" : "BID",
+          "tags" : [ ]
+        }, {
+          "url" : "https://github.com/newsoft/libvncserver/commit/045a044e8ae79db9244593fbce154cdf6e843273",
+          "name" : "https://github.com/newsoft/libvncserver/commit/045a044e8ae79db9244593fbce154cdf6e843273",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Patch", "Third Party Advisory" ]
+        }, {
+          "url" : "https://lists.debian.org/debian-lts-announce/2019/10/msg00042.html",
+          "name" : "[debian-lts-announce] 20191030 [SECURITY] [DLA 1979-1] italc security update",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://security.gentoo.org/glsa/201507-07",
+          "name" : "GLSA-201507-07",
+          "refsource" : "GENTOO",
+          "tags" : [ ]
+        }, {
+          "url" : "https://security.gentoo.org/glsa/201612-36",
+          "name" : "GLSA-201612-36",
+          "refsource" : "GENTOO",
+          "tags" : [ ]
+        }, {
+          "url" : "https://usn.ubuntu.com/4587-1/",
+          "name" : "USN-4587-1",
+          "refsource" : "UBUNTU",
+          "tags" : [ ]
+        }, {
+          "url" : "https://www.kde.org/info/security/advisory-20140923-1.txt",
+          "name" : "https://www.kde.org/info/security/advisory-20140923-1.txt",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Third Party Advisory" ]
+        } ]
+      },
+      "description" : {
+        "description_data" : [ {
+          "lang" : "en",
+          "value" : "Integer overflow in the MallocFrameBuffer function in vncviewer.c in LibVNCServer 0.9.9 and earlier allows remote VNC servers to cause a denial of service (crash) and possibly execute arbitrary code via an advertisement for a large screen size, which triggers a heap-based buffer overflow."
+        } ]
+      }
+    },
+    "configurations" : {
+      "CVE_data_version" : "4.0",
+      "nodes" : [ {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:redhat:enterprise_linux_server_aus:6.5:*:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:redhat:enterprise_linux_server_eus:6.5.z:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:fedoraproject:fedora:20:*:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:fedoraproject:fedora:21:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:libvncserver:libvncserver:*:*:*:*:*:*:*:*",
+          "versionEndIncluding" : "0.9.9"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:debian:debian_linux:7.0:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:oracle:solaris:11.3:*:*:*:*:*:*:*"
+        } ]
+      } ]
+    },
+    "impact" : {
+      "baseMetricV2" : {
+        "cvssV2" : {
+          "version" : "2.0",
+          "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+          "accessVector" : "NETWORK",
+          "accessComplexity" : "LOW",
+          "authentication" : "NONE",
+          "confidentialityImpact" : "PARTIAL",
+          "integrityImpact" : "PARTIAL",
+          "availabilityImpact" : "PARTIAL",
+          "baseScore" : 7.5
+        },
+        "severity" : "HIGH",
+        "exploitabilityScore" : 10.0,
+        "impactScore" : 6.4,
+        "obtainAllPrivilege" : false,
+        "obtainUserPrivilege" : false,
+        "obtainOtherPrivilege" : false,
+        "userInteractionRequired" : false
+      }
+    },
+    "publishedDate" : "2014-09-30T16:55Z",
+    "lastModifiedDate" : "2020-10-23T13:15Z"
+  }, {
+    "cve" : {
+      "data_type" : "CVE",
+      "data_format" : "MITRE",
+      "data_version" : "4.0",
+      "CVE_data_meta" : {
+        "ID" : "CVE-2014-6052",
+        "ASSIGNER" : "cve@mitre.org"
+      },
+      "problemtype" : {
+        "problemtype_data" : [ {
+          "description" : [ {
+            "lang" : "en",
+            "value" : "CWE-20"
+          } ]
+        } ]
+      },
+      "references" : {
+        "reference_data" : [ {
+          "url" : "http://lists.opensuse.org/opensuse-updates/2015-12/msg00022.html",
+          "name" : "openSUSE-SU-2015:2207",
+          "refsource" : "SUSE",
+          "tags" : [ ]
+        }, {
+          "url" : "http://seclists.org/oss-sec/2014/q3/639",
+          "name" : "[oss-security] 20140923 Multiple issues in libVNCserver",
+          "refsource" : "MLIST",
+          "tags" : [ "Mailing List", "Third Party Advisory" ]
+        }, {
+          "url" : "http://secunia.com/advisories/61506",
+          "name" : "61506",
+          "refsource" : "SECUNIA",
+          "tags" : [ "Permissions Required", "Third Party Advisory" ]
+        }, {
+          "url" : "http://secunia.com/advisories/61682",
+          "name" : "61682",
+          "refsource" : "SECUNIA",
+          "tags" : [ "Permissions Required", "Third Party Advisory" ]
+        }, {
+          "url" : "http://ubuntu.com/usn/usn-2365-1",
+          "name" : "USN-2365-1",
+          "refsource" : "UBUNTU",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.debian.org/security/2014/dsa-3081",
+          "name" : "DSA-3081",
+          "refsource" : "DEBIAN",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.ocert.org/advisories/ocert-2014-007.html",
+          "name" : "http://www.ocert.org/advisories/ocert-2014-007.html",
+          "refsource" : "MISC",
+          "tags" : [ "Third Party Advisory", "US Government Resource" ]
+        }, {
+          "url" : "http://www.openwall.com/lists/oss-security/2014/09/25/11",
+          "name" : "[oss-security] 20140925 [oCERT-2014-007] libvncserver multiple issues",
+          "refsource" : "MLIST",
+          "tags" : [ "Mailing List", "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.oracle.com/technetwork/topics/security/bulletinoct2015-2511968.html",
+          "name" : "http://www.oracle.com/technetwork/topics/security/bulletinoct2015-2511968.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.securityfocus.com/bid/70091",
+          "name" : "70091",
+          "refsource" : "BID",
+          "tags" : [ ]
+        }, {
+          "url" : "https://github.com/newsoft/libvncserver/commit/85a778c0e45e87e35ee7199f1f25020648e8b812",
+          "name" : "https://github.com/newsoft/libvncserver/commit/85a778c0e45e87e35ee7199f1f25020648e8b812",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Exploit", "Issue Tracking", "Patch" ]
+        }, {
+          "url" : "https://lists.debian.org/debian-lts-announce/2019/10/msg00042.html",
+          "name" : "[debian-lts-announce] 20191030 [SECURITY] [DLA 1979-1] italc security update",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://security.gentoo.org/glsa/201507-07",
+          "name" : "GLSA-201507-07",
+          "refsource" : "GENTOO",
+          "tags" : [ ]
+        }, {
+          "url" : "https://usn.ubuntu.com/4587-1/",
+          "name" : "USN-4587-1",
+          "refsource" : "UBUNTU",
+          "tags" : [ ]
+        } ]
+      },
+      "description" : {
+        "description_data" : [ {
+          "lang" : "en",
+          "value" : "The HandleRFBServerMessage function in libvncclient/rfbproto.c in LibVNCServer 0.9.9 and earlier does not check certain malloc return values, which allows remote VNC servers to cause a denial of service (application crash) or possibly execute arbitrary code by specifying a large screen size in a (1) FramebufferUpdate, (2) ResizeFrameBuffer, or (3) PalmVNCReSizeFrameBuffer message."
+        } ]
+      }
+    },
+    "configurations" : {
+      "CVE_data_version" : "4.0",
+      "nodes" : [ {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:libvncserver:libvncserver:*:*:*:*:*:*:*:*",
+          "versionEndIncluding" : "0.9.9"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:oracle:solaris:11.3:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:debian:debian_linux:7.0:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:canonical:ubuntu_linux:12.04:*:*:*:lts:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:canonical:ubuntu_linux:14.04:*:*:*:lts:*:*:*"
+        } ]
+      } ]
+    },
+    "impact" : {
+      "baseMetricV2" : {
+        "cvssV2" : {
+          "version" : "2.0",
+          "vectorString" : "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+          "accessVector" : "NETWORK",
+          "accessComplexity" : "LOW",
+          "authentication" : "NONE",
+          "confidentialityImpact" : "PARTIAL",
+          "integrityImpact" : "PARTIAL",
+          "availabilityImpact" : "PARTIAL",
+          "baseScore" : 7.5
+        },
+        "severity" : "HIGH",
+        "exploitabilityScore" : 10.0,
+        "impactScore" : 6.4,
+        "obtainAllPrivilege" : false,
+        "obtainUserPrivilege" : false,
+        "obtainOtherPrivilege" : false,
+        "userInteractionRequired" : false
+      }
+    },
+    "publishedDate" : "2014-12-15T18:59Z",
+    "lastModifiedDate" : "2020-10-23T13:15Z"
+  }, {
+    "cve" : {
+      "data_type" : "CVE",
+      "data_format" : "MITRE",
+      "data_version" : "4.0",
+      "CVE_data_meta" : {
+        "ID" : "CVE-2014-6053",
+        "ASSIGNER" : "cve@mitre.org"
+      },
+      "problemtype" : {
+        "problemtype_data" : [ {
+          "description" : [ {
+            "lang" : "en",
+            "value" : "CWE-19"
+          } ]
+        } ]
+      },
+      "references" : {
+        "reference_data" : [ {
+          "url" : "http://lists.opensuse.org/opensuse-updates/2015-12/msg00022.html",
+          "name" : "openSUSE-SU-2015:2207",
+          "refsource" : "SUSE",
+          "tags" : [ ]
+        }, {
+          "url" : "http://seclists.org/oss-sec/2014/q3/639",
+          "name" : "[oss-security] 20140923 Multiple issues in libVNCserver",
+          "refsource" : "MLIST",
+          "tags" : [ "Mailing List", "Third Party Advisory" ]
+        }, {
+          "url" : "http://secunia.com/advisories/61506",
+          "name" : "61506",
+          "refsource" : "SECUNIA",
+          "tags" : [ ]
+        }, {
+          "url" : "http://secunia.com/advisories/61682",
+          "name" : "61682",
+          "refsource" : "SECUNIA",
+          "tags" : [ ]
+        }, {
+          "url" : "http://ubuntu.com/usn/usn-2365-1",
+          "name" : "USN-2365-1",
+          "refsource" : "UBUNTU",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.debian.org/security/2014/dsa-3081",
+          "name" : "DSA-3081",
+          "refsource" : "DEBIAN",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.ocert.org/advisories/ocert-2014-007.html",
+          "name" : "http://www.ocert.org/advisories/ocert-2014-007.html",
+          "refsource" : "MISC",
+          "tags" : [ "Third Party Advisory", "US Government Resource" ]
+        }, {
+          "url" : "http://www.openwall.com/lists/oss-security/2014/09/25/11",
+          "name" : "[oss-security] 20140925 [oCERT-2014-007] libvncserver multiple issues",
+          "refsource" : "MLIST",
+          "tags" : [ "Mailing List", "Third Party Advisory" ]
+        }, {
+          "url" : "https://github.com/newsoft/libvncserver/commit/6037a9074d52b1963c97cb28ea1096c7c14cbf28",
+          "name" : "https://github.com/newsoft/libvncserver/commit/6037a9074d52b1963c97cb28ea1096c7c14cbf28",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Issue Tracking", "Patch" ]
+        }, {
+          "url" : "https://lists.debian.org/debian-lts-announce/2019/10/msg00042.html",
+          "name" : "[debian-lts-announce] 20191030 [SECURITY] [DLA 1979-1] italc security update",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.debian.org/debian-lts-announce/2019/11/msg00032.html",
+          "name" : "[debian-lts-announce] 20191129 [SECURITY] [DLA 2014-1] vino security update",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.debian.org/debian-lts-announce/2019/12/msg00028.html",
+          "name" : "[debian-lts-announce] 20191221 [SECURITY] [DLA 2045-1] tightvnc security update",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://security.gentoo.org/glsa/201507-07",
+          "name" : "GLSA-201507-07",
+          "refsource" : "GENTOO",
+          "tags" : [ ]
+        }, {
+          "url" : "https://usn.ubuntu.com/4573-1/",
+          "name" : "USN-4573-1",
+          "refsource" : "UBUNTU",
+          "tags" : [ ]
+        }, {
+          "url" : "https://usn.ubuntu.com/4587-1/",
+          "name" : "USN-4587-1",
+          "refsource" : "UBUNTU",
+          "tags" : [ ]
+        } ]
+      },
+      "description" : {
+        "description_data" : [ {
+          "lang" : "en",
+          "value" : "The rfbProcessClientNormalMessage function in libvncserver/rfbserver.c in LibVNCServer 0.9.9 and earlier does not properly handle attempts to send a large amount of ClientCutText data, which allows remote attackers to cause a denial of service (memory consumption or daemon crash) via a crafted message that is processed by using a single unchecked malloc."
+        } ]
+      }
+    },
+    "configurations" : {
+      "CVE_data_version" : "4.0",
+      "nodes" : [ {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:libvncserver:libvncserver:*:*:*:*:*:*:*:*",
+          "versionEndIncluding" : "0.9.9"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:canonical:ubuntu_linux:12.04:*:*:*:lts:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:canonical:ubuntu_linux:14.04:*:*:*:lts:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:debian:debian_linux:7.0:*:*:*:*:*:*:*"
+        } ]
+      } ]
+    },
+    "impact" : {
+      "baseMetricV2" : {
+        "cvssV2" : {
+          "version" : "2.0",
+          "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+          "accessVector" : "NETWORK",
+          "accessComplexity" : "LOW",
+          "authentication" : "NONE",
+          "confidentialityImpact" : "NONE",
+          "integrityImpact" : "NONE",
+          "availabilityImpact" : "PARTIAL",
+          "baseScore" : 5.0
+        },
+        "severity" : "MEDIUM",
+        "exploitabilityScore" : 10.0,
+        "impactScore" : 2.9,
+        "obtainAllPrivilege" : false,
+        "obtainUserPrivilege" : false,
+        "obtainOtherPrivilege" : false,
+        "userInteractionRequired" : false
+      }
+    },
+    "publishedDate" : "2014-12-15T18:59Z",
+    "lastModifiedDate" : "2020-10-23T13:15Z"
+  }, {
+    "cve" : {
+      "data_type" : "CVE",
+      "data_format" : "MITRE",
+      "data_version" : "4.0",
+      "CVE_data_meta" : {
+        "ID" : "CVE-2014-6054",
+        "ASSIGNER" : "cve@mitre.org"
+      },
+      "problemtype" : {
+        "problemtype_data" : [ {
+          "description" : [ {
+            "lang" : "en",
+            "value" : "CWE-189"
+          } ]
+        } ]
+      },
+      "references" : {
+        "reference_data" : [ {
+          "url" : "http://lists.opensuse.org/opensuse-updates/2015-12/msg00022.html",
+          "name" : "openSUSE-SU-2015:2207",
+          "refsource" : "SUSE",
+          "tags" : [ ]
+        }, {
+          "url" : "http://seclists.org/oss-sec/2014/q3/639",
+          "name" : "[oss-security] 20140923 Multiple issues in libVNCserver",
+          "refsource" : "MLIST",
+          "tags" : [ "Mailing List", "Third Party Advisory" ]
+        }, {
+          "url" : "http://secunia.com/advisories/61506",
+          "name" : "61506",
+          "refsource" : "SECUNIA",
+          "tags" : [ ]
+        }, {
+          "url" : "http://secunia.com/advisories/61682",
+          "name" : "61682",
+          "refsource" : "SECUNIA",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.debian.org/security/2014/dsa-3081",
+          "name" : "DSA-3081",
+          "refsource" : "DEBIAN",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.ocert.org/advisories/ocert-2014-007.html",
+          "name" : "http://www.ocert.org/advisories/ocert-2014-007.html",
+          "refsource" : "MISC",
+          "tags" : [ "Third Party Advisory", "US Government Resource" ]
+        }, {
+          "url" : "http://www.openwall.com/lists/oss-security/2014/09/25/11",
+          "name" : "[oss-security] 20140925 [oCERT-2014-007] libvncserver multiple issues",
+          "refsource" : "MLIST",
+          "tags" : [ "Mailing List", "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.securityfocus.com/bid/70094",
+          "name" : "70094",
+          "refsource" : "BID",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.ubuntu.com/usn/USN-2365-1",
+          "name" : "USN-2365-1",
+          "refsource" : "UBUNTU",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "https://github.com/newsoft/libvncserver/commit/05a9bd41a8ec0a9d580a8f420f41718bdd235446",
+          "name" : "https://github.com/newsoft/libvncserver/commit/05a9bd41a8ec0a9d580a8f420f41718bdd235446",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Issue Tracking", "Patch" ]
+        }, {
+          "url" : "https://lists.debian.org/debian-lts-announce/2019/10/msg00042.html",
+          "name" : "[debian-lts-announce] 20191030 [SECURITY] [DLA 1979-1] italc security update",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://security.gentoo.org/glsa/201507-07",
+          "name" : "GLSA-201507-07",
+          "refsource" : "GENTOO",
+          "tags" : [ ]
+        }, {
+          "url" : "https://usn.ubuntu.com/4587-1/",
+          "name" : "USN-4587-1",
+          "refsource" : "UBUNTU",
+          "tags" : [ ]
+        } ]
+      },
+      "description" : {
+        "description_data" : [ {
+          "lang" : "en",
+          "value" : "The rfbProcessClientNormalMessage function in libvncserver/rfbserver.c in LibVNCServer 0.9.9 and earlier allows remote attackers to cause a denial of service (divide-by-zero error and server crash) via a zero value in the scaling factor in a (1) PalmVNCSetScaleFactor or (2) SetScale message."
+        } ]
+      }
+    },
+    "configurations" : {
+      "CVE_data_version" : "4.0",
+      "nodes" : [ {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:libvncserver:libvncserver:*:*:*:*:*:*:*:*",
+          "versionEndIncluding" : "0.9.9"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:debian:debian_linux:7.0:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:canonical:ubuntu_linux:12.04:*:*:*:lts:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:canonical:ubuntu_linux:14.04:*:*:*:lts:*:*:*"
+        } ]
+      } ]
+    },
+    "impact" : {
+      "baseMetricV2" : {
+        "cvssV2" : {
+          "version" : "2.0",
+          "vectorString" : "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+          "accessVector" : "NETWORK",
+          "accessComplexity" : "MEDIUM",
+          "authentication" : "NONE",
+          "confidentialityImpact" : "NONE",
+          "integrityImpact" : "NONE",
+          "availabilityImpact" : "PARTIAL",
+          "baseScore" : 4.3
+        },
+        "severity" : "MEDIUM",
+        "exploitabilityScore" : 8.6,
+        "impactScore" : 2.9,
+        "obtainAllPrivilege" : false,
+        "obtainUserPrivilege" : false,
+        "obtainOtherPrivilege" : false,
+        "userInteractionRequired" : false
+      }
+    },
+    "publishedDate" : "2014-10-06T14:55Z",
+    "lastModifiedDate" : "2020-10-23T13:15Z"
+  }, {
+    "cve" : {
+      "data_type" : "CVE",
+      "data_format" : "MITRE",
+      "data_version" : "4.0",
+      "CVE_data_meta" : {
+        "ID" : "CVE-2014-6055",
+        "ASSIGNER" : "cve@mitre.org"
+      },
+      "problemtype" : {
+        "problemtype_data" : [ {
+          "description" : [ {
+            "lang" : "en",
+            "value" : "CWE-119"
+          } ]
+        } ]
+      },
+      "references" : {
+        "reference_data" : [ {
+          "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2014-October/139654.html",
+          "name" : "FEDORA-2014-11685",
+          "refsource" : "FEDORA",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://lists.fedoraproject.org/pipermail/package-announce/2014-September/139445.html",
+          "name" : "FEDORA-2014-11537",
+          "refsource" : "FEDORA",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://lists.opensuse.org/opensuse-updates/2015-12/msg00022.html",
+          "name" : "openSUSE-SU-2015:2207",
+          "refsource" : "SUSE",
+          "tags" : [ ]
+        }, {
+          "url" : "http://rhn.redhat.com/errata/RHSA-2015-0113.html",
+          "name" : "RHSA-2015:0113",
+          "refsource" : "REDHAT",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://seclists.org/oss-sec/2014/q3/639",
+          "name" : "[oss-security] 20140923 Multiple issues in libVNCserver",
+          "refsource" : "MLIST",
+          "tags" : [ "Mailing List", "Third Party Advisory" ]
+        }, {
+          "url" : "http://secunia.com/advisories/61506",
+          "name" : "61506",
+          "refsource" : "SECUNIA",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.debian.org/security/2014/dsa-3081",
+          "name" : "DSA-3081",
+          "refsource" : "DEBIAN",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.ocert.org/advisories/ocert-2014-007.html",
+          "name" : "http://www.ocert.org/advisories/ocert-2014-007.html",
+          "refsource" : "MISC",
+          "tags" : [ "Third Party Advisory", "US Government Resource" ]
+        }, {
+          "url" : "http://www.openwall.com/lists/oss-security/2014/09/25/11",
+          "name" : "[oss-security] 20140925 [oCERT-2014-007] libvncserver multiple issues",
+          "refsource" : "MLIST",
+          "tags" : [ "Mailing List", "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.securityfocus.com/bid/70096",
+          "name" : "70096",
+          "refsource" : "BID",
+          "tags" : [ "Third Party Advisory", "VDB Entry" ]
+        }, {
+          "url" : "https://exchange.xforce.ibmcloud.com/vulnerabilities/96187",
+          "name" : "libvncserver-cve20146055-bo(96187)",
+          "refsource" : "XF",
+          "tags" : [ ]
+        }, {
+          "url" : "https://github.com/newsoft/libvncserver/commit/06ccdf016154fde8eccb5355613ba04c59127b2e",
+          "name" : "https://github.com/newsoft/libvncserver/commit/06ccdf016154fde8eccb5355613ba04c59127b2e",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Issue Tracking", "Patch" ]
+        }, {
+          "url" : "https://github.com/newsoft/libvncserver/commit/f528072216dec01cee7ca35d94e171a3b909e677",
+          "name" : "https://github.com/newsoft/libvncserver/commit/f528072216dec01cee7ca35d94e171a3b909e677",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Issue Tracking", "Patch" ]
+        }, {
+          "url" : "https://lists.debian.org/debian-lts-announce/2019/10/msg00042.html",
+          "name" : "[debian-lts-announce] 20191030 [SECURITY] [DLA 1979-1] italc security update",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://security.gentoo.org/glsa/201507-07",
+          "name" : "GLSA-201507-07",
+          "refsource" : "GENTOO",
+          "tags" : [ ]
+        }, {
+          "url" : "https://usn.ubuntu.com/4587-1/",
+          "name" : "USN-4587-1",
+          "refsource" : "UBUNTU",
+          "tags" : [ ]
+        }, {
+          "url" : "https://www.kde.org/info/security/advisory-20140923-1.txt",
+          "name" : "https://www.kde.org/info/security/advisory-20140923-1.txt",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Issue Tracking", "Patch" ]
+        } ]
+      },
+      "description" : {
+        "description_data" : [ {
+          "lang" : "en",
+          "value" : "Multiple stack-based buffer overflows in the File Transfer feature in rfbserver.c in LibVNCServer 0.9.9 and earlier allow remote authenticated users to cause a denial of service (crash) and possibly execute arbitrary code via a (1) long file or (2) directory name or the (3) FileTime attribute in a rfbFileTransferOffer message."
+        } ]
+      }
+    },
+    "configurations" : {
+      "CVE_data_version" : "4.0",
+      "nodes" : [ {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:fedoraproject:fedora:20:*:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:fedoraproject:fedora:21:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:debian:debian_linux:7.0:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:redhat:enterprise_linux_server_aus:6.5:*:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:redhat:enterprise_linux_server_eus:6.5.z:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:libvncserver:libvncserver:*:*:*:*:*:*:*:*",
+          "versionEndIncluding" : "0.9.9"
+        } ]
+      } ]
+    },
+    "impact" : {
+      "baseMetricV2" : {
+        "cvssV2" : {
+          "version" : "2.0",
+          "vectorString" : "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+          "accessVector" : "NETWORK",
+          "accessComplexity" : "LOW",
+          "authentication" : "SINGLE",
+          "confidentialityImpact" : "PARTIAL",
+          "integrityImpact" : "PARTIAL",
+          "availabilityImpact" : "PARTIAL",
+          "baseScore" : 6.5
+        },
+        "severity" : "MEDIUM",
+        "exploitabilityScore" : 8.0,
+        "impactScore" : 6.4,
+        "obtainAllPrivilege" : false,
+        "obtainUserPrivilege" : false,
+        "obtainOtherPrivilege" : false,
+        "userInteractionRequired" : false
+      }
+    },
+    "publishedDate" : "2014-09-30T16:55Z",
+    "lastModifiedDate" : "2020-10-23T13:15Z"
+  }, {
+    "cve" : {
+      "data_type" : "CVE",
+      "data_format" : "MITRE",
+      "data_version" : "4.0",
+      "CVE_data_meta" : {
+        "ID" : "CVE-2014-8166",
+        "ASSIGNER" : "cve@mitre.org"
+      },
+      "problemtype" : {
+        "problemtype_data" : [ {
+          "description" : [ {
+            "lang" : "en",
+            "value" : "CWE-20"
+          } ]
+        } ]
+      },
+      "references" : {
+        "reference_data" : [ {
+          "url" : "http://www.openwall.com/lists/oss-security/2015/03/24/15",
+          "name" : "[oss-security] 20150324 Re: CVE-2014-8166 cups: code execution via unescape ANSI escape sequences",
+          "refsource" : "MLIST",
+          "tags" : [ "Mailing List", "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.openwall.com/lists/oss-security/2015/03/24/2",
+          "name" : "[oss-security] 20150323 CVE-2014-8166 cups: code execution via unescape ANSI escape sequences",
+          "refsource" : "MLIST",
+          "tags" : [ "Mailing List", "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.securityfocus.com/bid/73300",
+          "name" : "73300",
+          "refsource" : "BID",
+          "tags" : [ "Third Party Advisory", "VDB Entry" ]
+        }, {
+          "url" : "https://bugzilla.redhat.com/show_bug.cgi?id=1084577",
+          "name" : "https://bugzilla.redhat.com/show_bug.cgi?id=1084577",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Issue Tracking", "Patch", "Third Party Advisory", "VDB Entry" ]
+        } ]
+      },
+      "description" : {
+        "description_data" : [ {
+          "lang" : "en",
+          "value" : "The browsing feature in the server in CUPS does not filter ANSI escape sequences from shared printer names, which might allow remote attackers to execute arbitrary code via a crafted printer name."
+        } ]
+      }
+    },
+    "configurations" : {
+      "CVE_data_version" : "4.0",
+      "nodes" : [ {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:cups:cups:*:*:*:*:*:*:*:*",
+          "versionEndExcluding" : "1.6"
+        } ]
+      } ]
+    },
+    "impact" : {
+      "baseMetricV3" : {
+        "cvssV3" : {
+          "version" : "3.1",
+          "vectorString" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "attackVector" : "NETWORK",
+          "attackComplexity" : "LOW",
+          "privilegesRequired" : "NONE",
+          "userInteraction" : "REQUIRED",
+          "scope" : "UNCHANGED",
+          "confidentialityImpact" : "HIGH",
+          "integrityImpact" : "HIGH",
+          "availabilityImpact" : "HIGH",
+          "baseScore" : 8.8,
+          "baseSeverity" : "HIGH"
+        },
+        "exploitabilityScore" : 2.8,
+        "impactScore" : 5.9
+      },
+      "baseMetricV2" : {
+        "cvssV2" : {
+          "version" : "2.0",
+          "vectorString" : "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+          "accessVector" : "NETWORK",
+          "accessComplexity" : "HIGH",
+          "authentication" : "NONE",
+          "confidentialityImpact" : "PARTIAL",
+          "integrityImpact" : "PARTIAL",
+          "availabilityImpact" : "PARTIAL",
+          "baseScore" : 5.1
+        },
+        "severity" : "MEDIUM",
+        "exploitabilityScore" : 4.9,
+        "impactScore" : 6.4,
+        "acInsufInfo" : false,
+        "obtainAllPrivilege" : false,
+        "obtainUserPrivilege" : false,
+        "obtainOtherPrivilege" : false,
+        "userInteractionRequired" : true
+      }
+    },
+    "publishedDate" : "2018-01-12T17:29Z",
+    "lastModifiedDate" : "2020-10-23T13:22Z"
+  }, {
+    "cve" : {
+      "data_type" : "CVE",
+      "data_format" : "MITRE",
+      "data_version" : "4.0",
+      "CVE_data_meta" : {
+        "ID" : "CVE-2015-0228",
+        "ASSIGNER" : "cve@mitre.org"
+      },
+      "problemtype" : {
+        "problemtype_data" : [ {
+          "description" : [ {
+            "lang" : "en",
+            "value" : "CWE-20"
+          } ]
+        } ]
+      },
+      "references" : {
+        "reference_data" : [ {
+          "url" : "http://advisories.mageia.org/MGASA-2015-0099.html",
+          "name" : "http://advisories.mageia.org/MGASA-2015-0099.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "http://lists.apple.com/archives/security-announce/2015/Aug/msg00001.html",
+          "name" : "APPLE-SA-2015-08-13-2",
+          "refsource" : "APPLE",
+          "tags" : [ ]
+        }, {
+          "url" : "http://lists.apple.com/archives/security-announce/2015/Sep/msg00004.html",
+          "name" : "APPLE-SA-2015-09-16-4",
+          "refsource" : "APPLE",
+          "tags" : [ ]
+        }, {
+          "url" : "http://lists.opensuse.org/opensuse-updates/2015-03/msg00006.html",
+          "name" : "openSUSE-SU-2015:0418",
+          "refsource" : "SUSE",
+          "tags" : [ ]
+        }, {
+          "url" : "http://rhn.redhat.com/errata/RHSA-2015-1666.html",
+          "name" : "RHSA-2015:1666",
+          "refsource" : "REDHAT",
+          "tags" : [ ]
+        }, {
+          "url" : "http://svn.apache.org/repos/asf/httpd/httpd/branches/2.4.x/CHANGES",
+          "name" : "http://svn.apache.org/repos/asf/httpd/httpd/branches/2.4.x/CHANGES",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Vendor Advisory" ]
+        }, {
+          "url" : "http://www.oracle.com/technetwork/security-advisory/cpujul2016-2881720.html",
+          "name" : "http://www.oracle.com/technetwork/security-advisory/cpujul2016-2881720.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.oracle.com/technetwork/topics/security/linuxbulletinjan2016-2867209.html",
+          "name" : "http://www.oracle.com/technetwork/topics/security/linuxbulletinjan2016-2867209.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.securityfocus.com/bid/73041",
+          "name" : "73041",
+          "refsource" : "BID",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.securityfocus.com/bid/91787",
+          "name" : "91787",
+          "refsource" : "BID",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.securitytracker.com/id/1032967",
+          "name" : "1032967",
+          "refsource" : "SECTRACK",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.ubuntu.com/usn/USN-2523-1",
+          "name" : "USN-2523-1",
+          "refsource" : "UBUNTU",
+          "tags" : [ ]
+        }, {
+          "url" : "https://github.com/apache/httpd/commit/643f0fcf3b8ab09a68f0ecd2aa37aafeda3e63ef",
+          "name" : "https://github.com/apache/httpd/commit/643f0fcf3b8ab09a68f0ecd2aa37aafeda3e63ef",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "https://github.com/apache/httpd/commit/78eb3b9235515652ed141353d98c239237030410",
+          "name" : "https://github.com/apache/httpd/commit/78eb3b9235515652ed141353d98c239237030410",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/56c2e7cc9deb1c12a843d0dc251ea7fd3e7e80293cde02fcd65286ba@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20190815 svn commit: r1048743 [4/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/84a3714f0878781f6ed84473d1a503d2cc382277e100450209231830@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20190815 svn commit: r1048742 [4/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/rd18c3c43602e66f9cdcf09f1de233804975b9572b0456cc582390b6f@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20200401 svn commit: r1058586 [4/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/re3d27b6250aa8548b8845d314bb8a350b3df326cacbbfdfe4d455234@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20200401 svn commit: r1058587 [4/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://support.apple.com/HT205219",
+          "name" : "https://support.apple.com/HT205219",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "https://support.apple.com/kb/HT205031",
+          "name" : "https://support.apple.com/kb/HT205031",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        } ]
+      },
+      "description" : {
+        "description_data" : [ {
+          "lang" : "en",
+          "value" : "The lua_websocket_read function in lua_request.c in the mod_lua module in the Apache HTTP Server through 2.4.12 allows remote attackers to cause a denial of service (child-process crash) by sending a crafted WebSocket Ping frame after a Lua script has called the wsupgrade function."
+        } ]
+      }
+    },
+    "configurations" : {
+      "CVE_data_version" : "4.0",
+      "nodes" : [ {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*",
+          "versionEndIncluding" : "2.4.12"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:canonical:ubuntu_linux:10.04:*:*:*:lts:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:canonical:ubuntu_linux:12.04:*:*:*:lts:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:canonical:ubuntu_linux:14.04:*:*:*:lts:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:canonical:ubuntu_linux:14.10:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:apple:mac_os_x:10.10.4:*:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:apple:mac_os_x_server:5.0.3:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:opensuse:opensuse:13.2:*:*:*:*:*:*:*"
+        } ]
+      } ]
+    },
+    "impact" : {
+      "baseMetricV2" : {
+        "cvssV2" : {
+          "version" : "2.0",
+          "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+          "accessVector" : "NETWORK",
+          "accessComplexity" : "LOW",
+          "authentication" : "NONE",
+          "confidentialityImpact" : "NONE",
+          "integrityImpact" : "NONE",
+          "availabilityImpact" : "PARTIAL",
+          "baseScore" : 5.0
+        },
+        "severity" : "MEDIUM",
+        "exploitabilityScore" : 10.0,
+        "impactScore" : 2.9,
+        "obtainAllPrivilege" : false,
+        "obtainUserPrivilege" : false,
+        "obtainOtherPrivilege" : false,
+        "userInteractionRequired" : false
+      }
+    },
+    "publishedDate" : "2015-03-08T02:59Z",
+    "lastModifiedDate" : "2020-10-27T16:15Z"
+  }, {
+    "cve" : {
+      "data_type" : "CVE",
+      "data_format" : "MITRE",
+      "data_version" : "4.0",
+      "CVE_data_meta" : {
+        "ID" : "CVE-2015-0253",
+        "ASSIGNER" : "cve@mitre.org"
+      },
+      "problemtype" : {
+        "problemtype_data" : [ {
+          "description" : [ {
+            "lang" : "en",
+            "value" : "NVD-CWE-Other"
+          } ]
+        } ]
+      },
+      "references" : {
+        "reference_data" : [ {
+          "url" : "http://httpd.apache.org/security/vulnerabilities_24.html",
+          "name" : "http://httpd.apache.org/security/vulnerabilities_24.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Vendor Advisory" ]
+        }, {
+          "url" : "http://lists.apple.com/archives/security-announce/2015/Aug/msg00001.html",
+          "name" : "APPLE-SA-2015-08-13-2",
+          "refsource" : "APPLE",
+          "tags" : [ "Mailing List" ]
+        }, {
+          "url" : "http://lists.apple.com/archives/security-announce/2015/Sep/msg00004.html",
+          "name" : "APPLE-SA-2015-09-16-4",
+          "refsource" : "APPLE",
+          "tags" : [ "Mailing List" ]
+        }, {
+          "url" : "http://rhn.redhat.com/errata/RHSA-2015-1666.html",
+          "name" : "RHSA-2015:1666",
+          "refsource" : "REDHAT",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.apache.org/dist/httpd/CHANGES_2.4",
+          "name" : "http://www.apache.org/dist/httpd/CHANGES_2.4",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Release Notes", "Vendor Advisory" ]
+        }, {
+          "url" : "http://www.oracle.com/technetwork/topics/security/bulletinoct2015-2511968.html",
+          "name" : "http://www.oracle.com/technetwork/topics/security/bulletinoct2015-2511968.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.oracle.com/technetwork/topics/security/linuxbulletinjan2016-2867209.html",
+          "name" : "http://www.oracle.com/technetwork/topics/security/linuxbulletinjan2016-2867209.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "http://www.securityfocus.com/bid/75964",
+          "name" : "75964",
+          "refsource" : "BID",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.securitytracker.com/id/1032967",
+          "name" : "1032967",
+          "refsource" : "SECTRACK",
+          "tags" : [ ]
+        }, {
+          "url" : "https://bz.apache.org/bugzilla/show_bug.cgi?id=57531",
+          "name" : "https://bz.apache.org/bugzilla/show_bug.cgi?id=57531",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Issue Tracking" ]
+        }, {
+          "url" : "https://github.com/apache/httpd/commit/6a974059190b8a0c7e499f4ab12fe108127099cb",
+          "name" : "https://github.com/apache/httpd/commit/6a974059190b8a0c7e499f4ab12fe108127099cb",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "https://github.com/apache/httpd/commit/be0f5335e3e73eb63253b050fdc23f252f5c8ae3",
+          "name" : "https://github.com/apache/httpd/commit/be0f5335e3e73eb63253b050fdc23f252f5c8ae3",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/56c2e7cc9deb1c12a843d0dc251ea7fd3e7e80293cde02fcd65286ba@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20190815 svn commit: r1048743 [4/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/84a3714f0878781f6ed84473d1a503d2cc382277e100450209231830@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20190815 svn commit: r1048742 [4/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/rd18c3c43602e66f9cdcf09f1de233804975b9572b0456cc582390b6f@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20200401 svn commit: r1058586 [4/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/re3d27b6250aa8548b8845d314bb8a350b3df326cacbbfdfe4d455234@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20200401 svn commit: r1058587 [4/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://support.apple.com/HT205219",
+          "name" : "https://support.apple.com/HT205219",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Third Party Advisory" ]
+        }, {
+          "url" : "https://support.apple.com/kb/HT205031",
+          "name" : "https://support.apple.com/kb/HT205031",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Third Party Advisory" ]
+        } ]
+      },
+      "description" : {
+        "description_data" : [ {
+          "lang" : "en",
+          "value" : "The read_request_line function in server/protocol.c in the Apache HTTP Server 2.4.12 does not initialize the protocol structure member, which allows remote attackers to cause a denial of service (NULL pointer dereference and process crash) by sending a request that lacks a method to an installation that enables the INCLUDES filter and has an ErrorDocument 400 directive specifying a local URI."
+        }, {
+          "lang" : "en",
+          "value" : "<a href=\"http://cwe.mitre.org/data/definitions/476.html\">CWE-476: NULL Pointer Dereference</a>"
+        } ]
+      }
+    },
+    "configurations" : {
+      "CVE_data_version" : "4.0",
+      "nodes" : [ {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:apache:http_server:2.4.12:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:apple:mac_os_x:10.10.4:*:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:apple:mac_os_x_server:5.0.3:*:*:*:*:*:*:*"
+        } ]
+      }, {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:oracle:linux:7:*:*:*:*:*:*:*"
+        }, {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:o:oracle:solaris:11.3:*:*:*:*:*:*:*"
+        } ]
+      } ]
+    },
+    "impact" : {
+      "baseMetricV2" : {
+        "cvssV2" : {
+          "version" : "2.0",
+          "vectorString" : "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+          "accessVector" : "NETWORK",
+          "accessComplexity" : "LOW",
+          "authentication" : "NONE",
+          "confidentialityImpact" : "NONE",
+          "integrityImpact" : "NONE",
+          "availabilityImpact" : "PARTIAL",
+          "baseScore" : 5.0
+        },
+        "severity" : "MEDIUM",
+        "exploitabilityScore" : 10.0,
+        "impactScore" : 2.9,
+        "obtainAllPrivilege" : false,
+        "obtainUserPrivilege" : false,
+        "obtainOtherPrivilege" : false,
+        "userInteractionRequired" : false
+      }
+    },
+    "publishedDate" : "2015-07-20T23:59Z",
+    "lastModifiedDate" : "2020-10-27T16:15Z"
+  }, {
+    "cve" : {
+      "data_type" : "CVE",
+      "data_format" : "MITRE",
+      "data_version" : "4.0",
+      "CVE_data_meta" : {
+        "ID" : "CVE-2015-3183",
+        "ASSIGNER" : "cve@mitre.org"
+      },
+      "problemtype" : {
+        "problemtype_data" : [ {
+          "description" : [ {
+            "lang" : "en",
+            "value" : "CWE-17"
+          }, {
+            "lang" : "en",
+            "value" : "CWE-20"
+          } ]
+        } ]
+      },
+      "references" : {
+        "reference_data" : [ {
+          "url" : "http://httpd.apache.org/security/vulnerabilities_24.html",
+          "name" : "http://httpd.apache.org/security/vulnerabilities_24.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ "Vendor Advisory" ]
+        }, {
+          "url" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10735",
+          "name" : "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10735",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "http://lists.apple.com/archives/security-announce/2015/Aug/msg00001.html",
+          "name" : "APPLE-SA-2015-08-13-2",
+          "refsource" : "APPLE",
+          "tags" : [ ]
+        }, {
+          "url" : "http://lists.apple.com/archives/security-announce/2015/Sep/msg00004.html",
+          "name" : "APPLE-SA-2015-09-16-4",
+          "refsource" : "APPLE",
+          "tags" : [ ]
+        }, {
+          "url" : "http://lists.opensuse.org/opensuse-updates/2015-10/msg00011.html",
+          "name" : "openSUSE-SU-2015:1684",
+          "refsource" : "SUSE",
+          "tags" : [ ]
+        }, {
+          "url" : "http://marc.info/?l=bugtraq&m=144493176821532&w=2",
+          "name" : "SSRT102254",
+          "refsource" : "HP",
+          "tags" : [ ]
+        }, {
+          "url" : "http://rhn.redhat.com/errata/RHSA-2015-1666.html",
+          "name" : "RHSA-2015:1666",
+          "refsource" : "REDHAT",
+          "tags" : [ ]
+        }, {
+          "url" : "http://rhn.redhat.com/errata/RHSA-2015-1667.html",
+          "name" : "RHSA-2015:1667",
+          "refsource" : "REDHAT",
+          "tags" : [ ]
+        }, {
+          "url" : "http://rhn.redhat.com/errata/RHSA-2015-1668.html",
+          "name" : "RHSA-2015:1668",
+          "refsource" : "REDHAT",
+          "tags" : [ ]
+        }, {
+          "url" : "http://rhn.redhat.com/errata/RHSA-2015-2661.html",
+          "name" : "RHSA-2015:2661",
+          "refsource" : "REDHAT",
+          "tags" : [ ]
+        }, {
+          "url" : "http://rhn.redhat.com/errata/RHSA-2016-0061.html",
+          "name" : "RHSA-2016:0061",
+          "refsource" : "REDHAT",
+          "tags" : [ ]
+        }, {
+          "url" : "http://rhn.redhat.com/errata/RHSA-2016-0062.html",
+          "name" : "RHSA-2016:0062",
+          "refsource" : "REDHAT",
+          "tags" : [ ]
+        }, {
+          "url" : "http://rhn.redhat.com/errata/RHSA-2016-2054.html",
+          "name" : "RHSA-2016:2054",
+          "refsource" : "REDHAT",
+          "tags" : [ ]
+        }, {
+          "url" : "http://rhn.redhat.com/errata/RHSA-2016-2055.html",
+          "name" : "RHSA-2016:2055",
+          "refsource" : "REDHAT",
+          "tags" : [ ]
+        }, {
+          "url" : "http://rhn.redhat.com/errata/RHSA-2016-2056.html",
+          "name" : "RHSA-2016:2056",
+          "refsource" : "REDHAT",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.apache.org/dist/httpd/CHANGES_2.4",
+          "name" : "http://www.apache.org/dist/httpd/CHANGES_2.4",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.debian.org/security/2015/dsa-3325",
+          "name" : "DSA-3325",
+          "refsource" : "DEBIAN",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.oracle.com/technetwork/security-advisory/cpujul2016-2881720.html",
+          "name" : "http://www.oracle.com/technetwork/security-advisory/cpujul2016-2881720.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.oracle.com/technetwork/topics/security/bulletinoct2015-2511968.html",
+          "name" : "http://www.oracle.com/technetwork/topics/security/bulletinoct2015-2511968.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.oracle.com/technetwork/topics/security/cpujan2016-2367955.html",
+          "name" : "http://www.oracle.com/technetwork/topics/security/cpujan2016-2367955.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.oracle.com/technetwork/topics/security/cpuoct2015-2367953.html",
+          "name" : "http://www.oracle.com/technetwork/topics/security/cpuoct2015-2367953.html",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.securityfocus.com/bid/75963",
+          "name" : "75963",
+          "refsource" : "BID",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.securityfocus.com/bid/91787",
+          "name" : "91787",
+          "refsource" : "BID",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.securitytracker.com/id/1032967",
+          "name" : "1032967",
+          "refsource" : "SECTRACK",
+          "tags" : [ ]
+        }, {
+          "url" : "http://www.ubuntu.com/usn/USN-2686-1",
+          "name" : "USN-2686-1",
+          "refsource" : "UBUNTU",
+          "tags" : [ ]
+        }, {
+          "url" : "https://access.redhat.com/errata/RHSA-2015:2659",
+          "name" : "RHSA-2015:2659",
+          "refsource" : "REDHAT",
+          "tags" : [ ]
+        }, {
+          "url" : "https://access.redhat.com/errata/RHSA-2015:2660",
+          "name" : "RHSA-2015:2660",
+          "refsource" : "REDHAT",
+          "tags" : [ ]
+        }, {
+          "url" : "https://github.com/apache/httpd/commit/a6027e56924bb6227c1fdbf6f91e7e2438338be6",
+          "name" : "https://github.com/apache/httpd/commit/a6027e56924bb6227c1fdbf6f91e7e2438338be6",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "https://github.com/apache/httpd/commit/e427c41257957b57036d5a549b260b6185d1dd73",
+          "name" : "https://github.com/apache/httpd/commit/e427c41257957b57036d5a549b260b6185d1dd73",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "https://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04832246",
+          "name" : "https://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04832246",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "https://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04926789",
+          "name" : "https://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04926789",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/56c2e7cc9deb1c12a843d0dc251ea7fd3e7e80293cde02fcd65286ba@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20190815 svn commit: r1048743 [4/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/84a3714f0878781f6ed84473d1a503d2cc382277e100450209231830@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20190815 svn commit: r1048742 [4/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/8d63cb8e9100f28a99429b4328e4e7cebce861d5772ac9863ba2ae6f@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20190815 svn commit: r1048743 [3/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/f7f95ac1cd9895db2714fa3ebaa0b94d0c6df360f742a40951384a53@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20190815 svn commit: r1048742 [3/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/r57608dc51b79102f3952ae06f54d5277b649c86d6533dcd6a7d201f7@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20200401 svn commit: r1058586 [3/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/rd18c3c43602e66f9cdcf09f1de233804975b9572b0456cc582390b6f@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20200401 svn commit: r1058586 [4/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/re3d27b6250aa8548b8845d314bb8a350b3df326cacbbfdfe4d455234@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20200401 svn commit: r1058587 [4/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://lists.apache.org/thread.html/rfbaf647d52c1cb843e726a0933f156366a806cead84fbd430951591b@%3Ccvs.httpd.apache.org%3E",
+          "name" : "[httpd-cvs] 20200401 svn commit: r1058587 [3/4] - in /websites/staging/httpd/trunk/content: ./ security/vulnerabilities-httpd.xml security/vulnerabilities_13.html security/vulnerabilities_20.html security/vulnerabilities_22.html security/vulnerabilities_24.html",
+          "refsource" : "MLIST",
+          "tags" : [ ]
+        }, {
+          "url" : "https://puppet.com/security/cve/CVE-2015-3183",
+          "name" : "https://puppet.com/security/cve/CVE-2015-3183",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "https://security.gentoo.org/glsa/201610-02",
+          "name" : "GLSA-201610-02",
+          "refsource" : "GENTOO",
+          "tags" : [ ]
+        }, {
+          "url" : "https://support.apple.com/HT205219",
+          "name" : "https://support.apple.com/HT205219",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        }, {
+          "url" : "https://support.apple.com/kb/HT205031",
+          "name" : "https://support.apple.com/kb/HT205031",
+          "refsource" : "CONFIRM",
+          "tags" : [ ]
+        } ]
+      },
+      "description" : {
+        "description_data" : [ {
+          "lang" : "en",
+          "value" : "The chunked transfer coding implementation in the Apache HTTP Server before 2.4.14 does not properly parse chunk headers, which allows remote attackers to conduct HTTP request smuggling attacks via a crafted request, related to mishandling of large chunk-size values and invalid chunk-extension characters in modules/http/http_filters.c."
+        } ]
+      }
+    },
+    "configurations" : {
+      "CVE_data_version" : "4.0",
+      "nodes" : [ {
+        "operator" : "OR",
+        "cpe_match" : [ {
+          "vulnerable" : true,
+          "cpe23Uri" : "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*",
+          "versionEndIncluding" : "2.4.13"
+        } ]
+      } ]
+    },
+    "impact" : {
+      "baseMetricV2" : {
+        "cvssV2" : {
+          "version" : "2.0",
+          "vectorString" : "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+          "accessVector" : "NETWORK",
+          "accessComplexity" : "LOW",
+          "authentication" : "NONE",
+          "confidentialityImpact" : "NONE",
+          "integrityImpact" : "PARTIAL",
+          "availabilityImpact" : "NONE",
+          "baseScore" : 5.0
+        },
+        "severity" : "MEDIUM",
+        "exploitabilityScore" : 10.0,
+        "impactScore" : 2.9,
+        "obtainAllPrivilege" : false,
+        "obtainUserPrivilege" : false,
+        "obtainOtherPrivilege" : false,
+        "userInteractionRequired" : false
+      }
+    },
+    "publishedDate" : "2015-07-20T23:59Z",
+    "lastModifiedDate" : "2020-10-27T15:15Z"
+  }]
+}
