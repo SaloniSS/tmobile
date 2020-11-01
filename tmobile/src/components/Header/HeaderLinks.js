@@ -26,7 +26,7 @@ export default function HeaderLinks(props) {
           onClick={(e) => e.preventDefault()}
           color="transparent"
         >
-          <Link to="/" className={classes.dropdownLink}>
+          <Link to="/rugged" className={classes.dropdownLink}>
             Learn
           </Link>
         </Button>

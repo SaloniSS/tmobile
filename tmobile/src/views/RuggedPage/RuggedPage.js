@@ -98,6 +98,48 @@ const RuggedPage = (props) => {
                 ]}
               />
             </GridItem>
+            <GridItem xs={12} sm={12} md={6}>
+              <CustomTabs
+                headerColor="primary"
+                tabs={[
+                  {
+                    tabName: "CTF",
+                    tabContent: (
+                      <p>
+                        Get some mock experience in solving challenges to help
+                        you become a better cyber-security professional here! We
+                        take you through 2 CTFs to learn necessary skills to
+                        learn how to make your code more safe.
+                      </p>
+                    ),
+                  },
+                  {
+                    tabName: "Pen Testing",
+                    tabContent: (
+                      <p>
+                        Most approaches to security are about finding
+                        Vulnerabilitiesand then fixing them. However, Rugged
+                        believes that defending against threats is the answer,
+                        not fixing holes. Others cover their issues and move on,
+                        not learning from their mistakes, running into the same
+                        issues again and again, while Rugged learns and evolves.
+                      </p>
+                    ),
+                  },
+                  {
+                    tabName: "Vulnerabilities",
+                    tabContent: (
+                      <p>
+                        Here is a list of all the Common Vulnerabilities and
+                        Exposures. It pulls from the CVE database RSS feed to
+                        get the latest ones. You can search for keywords and
+                        based on severity.
+                      </p>
+                    ),
+                  },
+                ]}
+              />
+            </GridItem>
             )
           </GridContainer>
         </div>
