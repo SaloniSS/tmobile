@@ -24,9 +24,13 @@ export default function ACM() {
 
   const classes = useStyles();
 
-  function getResults() {
+  const getResults = async () => {
     console.log("Testing website", website);
     setResult(true);
+  }
+
+  const log = (event) => {
+    console.log(log);
   }
 
   return (
@@ -36,17 +40,21 @@ export default function ACM() {
           <CustomInput
             id="regular"
             inputProps={{
-              placeholder: "Website Link",
+              onChange: getResults,
+              type: "text",
+              name: "regular",
+              placeholder: "test"
             }}
             formControlProps={{
               fullWidth: true,
             }}
             value={website}
-            onChange={(event) => setWebsite(event.target.value)}
+            onChange={(events) => log(events.target.value)}
           />
           <Button onClick={() => getResults()} color="primary">
             Test
           </Button>
+          <h4 className={classes.description}>{website} hi</h4>
           {result && (
             <>
               <h4 className={classes.title}>Result</h4>
