@@ -1,9 +1,11 @@
 from flask import Flask
 from bs4 import BeautifulSoup
 import requests
+from flask_cors import CORS
 import re
 
 app = Flask(__name__)
+CORS(app)
 
 def test_main(url):
     count = 0

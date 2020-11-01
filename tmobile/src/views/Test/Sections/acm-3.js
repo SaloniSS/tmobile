@@ -15,6 +15,8 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
+const axios = require("axios").default;
+
 const useStyles = makeStyles(styles);
 
 export default function ACM() {
@@ -24,10 +26,27 @@ export default function ACM() {
 
   const classes = useStyles();
 
-  function getResults() {
+  const getResults = async () => {
     console.log("Testing website", website);
+    const tempWebsite = "http://acmutd.co/";
+    console.log(website.substring(website.indexOf("//") + 2));
+    const changedWebsite = website.substring(
+      website.indexOf("//") + 2,
+      website.length - 1
+    );
+    console.log(changedWebsite);
+    //const result = await axios(`http://localhost:5000/${changedWebsite}`);
+    const result = await axios(
+      `https://tmobile20.ue.r.appspot.com/${changedWebsite}`
+    );
+    console.log(result);
+    setFlags(result.data);
     setResult(true);
-  }
+  };
+
+  const handleChange = (event) => {
+    setWebsite(event.target.value);
+  };
 
   return (
     <div className={classes.section}>
@@ -36,17 +55,20 @@ export default function ACM() {
           <CustomInput
             id="regular"
             inputProps={{
+              value: website,
+              onChange: handleChange,
+              type: "text",
+              name: "regular",
               placeholder: "Website Link",
             }}
             formControlProps={{
               fullWidth: true,
             }}
-            value={website}
-            onChange={(event) => setWebsite(event.target.value)}
           />
           <Button onClick={() => getResults()} color="primary">
             Test
           </Button>
+          {/* <h4 className={classes.description}>{website} hi</h4> */}
           {result && (
             <>
               <h4 className={classes.title}>Result</h4>
