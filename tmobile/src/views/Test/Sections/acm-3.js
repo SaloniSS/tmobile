@@ -26,13 +26,13 @@ export default function ACM() {
 
   const classes = useStyles();
 
-  async function getResults() {
+  const getResults = async () => {
     console.log("Testing website", website);
     const tempWebsite = "http://acmutd.co/";
-    console.log(tempWebsite.substring(tempWebsite.indexOf("//") + 2));
-    const changedWebsite = tempWebsite.substring(
-      tempWebsite.indexOf("//") + 2,
-      tempWebsite.length - 1
+    console.log(website.substring(website.indexOf("//") + 2));
+    const changedWebsite = website.substring(
+      website.indexOf("//") + 2,
+      website.length - 1
     );
     console.log(changedWebsite);
     //const result = await axios(`http://localhost:5000/${changedWebsite}`);
@@ -42,7 +42,11 @@ export default function ACM() {
     console.log(result);
     setFlags(result.data);
     setResult(true);
-  }
+  };
+
+  const handleChange = (event) => {
+    setWebsite(event.target.value);
+  };
 
   return (
     <div className={classes.section}>
@@ -51,17 +55,20 @@ export default function ACM() {
           <CustomInput
             id="regular"
             inputProps={{
+              value: website,
+              onChange: handleChange,
+              type: "text",
+              name: "regular",
               placeholder: "Website Link",
             }}
             formControlProps={{
               fullWidth: true,
             }}
-            value={website}
-            onChange={(event) => setWebsite(event.target.value)}
           />
           <Button onClick={() => getResults()} color="primary">
             Test
           </Button>
+          {/* <h4 className={classes.description}>{website} hi</h4> */}
           {result && (
             <>
               <h4 className={classes.title}>Result</h4>
