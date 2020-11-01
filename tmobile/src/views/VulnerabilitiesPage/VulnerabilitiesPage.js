@@ -7,7 +7,10 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
+import CustomInput from "components/CustomInput/CustomInput.js";
 import CustomTabs from "components/CustomTabs/CustomTabs.js";
+import Search from "@material-ui/icons/Search";
+import Button from "components/CustomButtons/Button.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 import cve from "./cve.json";
@@ -48,6 +51,25 @@ const VulnerabilitiesPage = (props) => {
                 some information about them.
               </h4>
               <br />
+              <div>
+                <CustomInput
+                  white
+                  inputRootCustomClasses={classes.inputRootCustomClasses}
+                  formControlProps={{
+                    className: classes.formControl,
+                  }}
+                  inputProps={{
+                    placeholder: "Search",
+                    inputProps: {
+                      "aria-label": "Search",
+                      className: classes.searchInput,
+                    },
+                  }}
+                />
+                <Button justIcon round color="white">
+                  <Search className={classes.searchIcon} />
+                </Button>
+              </div>
             </GridItem>
           </GridContainer>
         </div>
@@ -91,15 +113,30 @@ const VulnerabilitiesPage = (props) => {
                       ),
                     },
                     {
-                      tabName: "Misc.",
+                      tabName: "Stats",
                       tabContent: (
                         <p>
-                          Exploitability Score:
-                          {vun.impact.baseMetricV3
-                            ? vun.impact.baseMetricV3.exploitabilityScore
-                            : "hi"}
+                          Exploitability Score: {""}
+                          {vun.impact.baseMetricV2.exploitabilityScore}
+                          <br />
+                          Impact Score: {""}
+                          {vun.impact.baseMetricV2.impactScore}
+                          <br />
+                          Severity: {""}
+                          {vun.impact.baseMetricV2.severity}
+                          <br />
+                          Confidentiality Impact: {""}
+                          {vun.impact.baseMetricV2.cvssV2.confidentialityImpact}
+                          <br />
+                          Integrity Impact: {""}
+                          {vun.impact.baseMetricV2.cvssV2.integrityImpact}
+                          <br />
+                          Availability Impact:{" "}
+                          {vun.impact.baseMetricV2.cvssV2.availabilityImpact}
                           <br />
                           Published: {vun.publishedDate}
+                          <br />
+                          Last Modified: {vun.lastModifiedDate}
                         </p>
                       ),
                     },
