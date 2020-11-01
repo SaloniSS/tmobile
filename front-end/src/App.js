@@ -1,9 +1,10 @@
 import './App.css';
+import Test from './screens/test';
 
 function App() {
   return (
     <div className="App">
-      <h1>T-Mobile</h1>
+      <Test />
     </div>
   );
 }
