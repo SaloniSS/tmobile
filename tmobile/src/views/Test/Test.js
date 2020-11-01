@@ -33,7 +33,7 @@ export default function Test(props) {
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="Capture The Flag"
+        brand="Pen Testing"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
