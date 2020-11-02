@@ -35,7 +35,7 @@ const RuggedPage = (props) => {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>About Rugged</h1>
+              <h1 className={classes.title}>About Secure</h1>
               <h4>
                 Creating software that is available, survivable, defensible,
                 secure, and resilient
